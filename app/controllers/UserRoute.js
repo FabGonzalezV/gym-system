@@ -1,4 +1,4 @@
-class UsersRoute {
+export default class UsersRoute {
 
     static configRoutes(router) {
         router.route('/').get((req, res) => res.send('hello world'));
@@ -7,4 +7,4 @@ class UsersRoute {
 
 }
 
-export default UsersRoute;
+ 
