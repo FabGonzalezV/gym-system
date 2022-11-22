@@ -1,17 +1,21 @@
 
 class User {
-    constructor(name, lastName, age, height, weight, instalment) {
+    constructor( id, name, lastName, age, height, weight, email, instalment ) {
+        this.id =id;
         this.name = name;
         this.lastName = lastName;
         this.age = age;
         this.height = height;
         this.weight = weight;
         this.instalment = instalment;
+        this.email = email;
         this.dateEnrollment = new Date();
         this.currentDate = new Date();
     }
 
     //getters
+    getId() { return this.id; }
+
     getName() { return this.name }
 
     getLastName() { return this.lastName; }
@@ -28,6 +32,8 @@ class User {
 
     getCurrentDate() { return this.currentDate; }
 
+    getEmail(){return this.email;}
+
     //setters
     setName(newName) { this.name = newName; }
 
@@ -40,7 +46,9 @@ class User {
     setWeight(newWeight) { this.weight = newWeight; }
 
     setInstalment(newInstalment) { this.instalment = newInstalment; }
- 
+
+    getEmail(newEmail){ this.email = newEmail;}
+
 }
 
 module.exports = User;
