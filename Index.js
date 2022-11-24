@@ -45,7 +45,7 @@ class Index {
             });
         } catch (e) {
             console.error(e);
-             client.close();
+//             client.close();
             process.exit(1);
         }
     }
