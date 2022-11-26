@@ -5,7 +5,7 @@ import mongodb from 'mongodb';
 import cors from 'cors';
 import express from 'express';
 
-
+import bodyParser from 'body-parser';
 
 class Index {
     static app = express();
@@ -27,7 +27,7 @@ class Index {
         Index.app.set('view engine', 'ejs');
         Index.app.set('views', './../frontend/views');
         Index.app.use(express.static('./../frontend/public'));
-
+        Index.app.use(bodyParser.urlencoded({ extended: false }))
         Index.app.use('/api/v1/control', UsersRoute.configRoutes(Index.router));
 
         Index.app.use('*', (req, res) => {

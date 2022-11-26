@@ -5,7 +5,7 @@ export default class UsersRoute {
 
     static configRoutes(router) {
         router.route('/')
-            .get((req, res) => res.render('index')
+            .get((req, res) => res.render('index.ejs')
             );
 
         router
